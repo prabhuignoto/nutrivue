@@ -6,7 +6,8 @@ export default {
     foodType: "common",
     loadingInstant: false,
     results: [],
-    isLoadingSuggestions: false
+    isLoadingSuggestions: false,
+    error: {}
   },
   mutations: {
     selectFood(state, payload) {
@@ -23,6 +24,9 @@ export default {
     },
     suggestionsLoaded(state) {
       state.isLoadingSuggestions = false;
+    },
+    error(state, payload) {
+      state.error = payload;
     }
   },
   actions: {
@@ -57,7 +61,7 @@ export default {
         }));
         commit("results", suggestions);
       } catch (error) {
-        console.log(error);
+        commit("error", error);
       }
     }
   }

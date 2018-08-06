@@ -7,7 +7,8 @@ export default {
       photo: {},
       primaryAttributes: []
     },
-    searchInProgress: false
+    searchInProgress: false,
+    error: {}
   },
   mutations: {
     updateData(state, payload) {
@@ -15,6 +16,9 @@ export default {
     },
     updateSearchProgress(state, payload) {
       state.searchInProgress = payload;
+    },
+    error(state, payload) {
+      state.error = payload;
     }
   },
   actions: {
@@ -108,7 +112,7 @@ export default {
         }))[0];
         commit("updateData", data);
       } catch (error) {
-        console.log(error);
+        commit("error", error);
       }
     }
   }
