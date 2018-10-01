@@ -35,7 +35,7 @@ export default {
   width: 100%;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 80vh;
+  min-height: 950px;
 }
 .nutri-wrapper {
   display: flex;
