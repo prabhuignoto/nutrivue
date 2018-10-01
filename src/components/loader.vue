@@ -29,9 +29,9 @@ export default {
   width: 100%;
   height: 2px;
   position: absolute;
-  top: -3px;
+  top: 0.1rem;
   background: #9dc183;
-  left: 0;
+  left: 0px;
 
   .app-loader {
     width: 0%;

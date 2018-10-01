@@ -1,8 +1,9 @@
 <template>
-  <div class="nutri-card-wrapper container" v-if="items.length > 0">
+  <div class="nutri-card-wrapper" v-if="items.length > 0">
+    <loader v-if="isLoading"/>
     <!-- <header class="title">{{name}}</header> -->
     <div class="content-wrapper columns is-centered is-multiline">
-      <div class="primary-attributes-wrapper column">
+      <div class="primary-attributes-wrapper column is-12-mobile is-6-tablet is-6-desktop">
         <ul class="primary-attributes">
           <li class="attribute-head">Nutrition Facts</li>
           <li v-for="item in items" :key="item.name" class="attribute">
@@ -10,10 +11,9 @@
           </li>
         </ul>
       </div>
-      <div class="img-wrapper column">
+      <div class="img-wrapper column is-12-mobile is-6-tablet is-5-desktop">
         <img :src="photo.highres" class="img" />
       </div>
-      <loader v-if="isLoading"/>
     </div>
   </div>  
 </template>
@@ -43,11 +43,9 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  // min-width: 250px;
-  // max-width: 660px;
   border-radius: 3px;
-  background: #fff;
-  border: 2px solid #9dc183;
+  background: transparent;
+  /* min-height: 70vh; */
 }
 
 .content-wrapper {
@@ -63,11 +61,11 @@ export default {
 
 .img-wrapper {
   height: 500px;
-  width: 70%;
+  /* width: 70%; */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
 
   .img {
     max-width: 100%;
@@ -93,7 +91,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
   flex-direction: column;
   // background: rgba()
   position: relative;

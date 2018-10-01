@@ -1,6 +1,5 @@
 <template>
   <div class="home container">
-    <!-- <img src="../assets/logo.png"> -->
     <div class="home-wrapper">
         <auto-suggest />
       <div class="nutri-wrapper">
@@ -25,23 +24,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home {
+  background: url(../assets/background.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
 .home-wrapper {
   display: flex;
   width: 100%;
   flex-direction: column;
   margin: 0 auto;
-  margin-top: 2rem;
+  min-height: 80vh;
 }
 .nutri-wrapper {
-  // width: 35%;
   display: flex;
   align-items: center;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 .auto-wrapper {
-  // width: 45%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  // height: 80vh;
 }
 </style>

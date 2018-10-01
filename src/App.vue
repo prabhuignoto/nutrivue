@@ -1,15 +1,29 @@
 <template>
   <div id="app" class="container">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
+    <header id="nav">
+      <!-- <router-link to="/">Home</router-link> -->
       <div class="logo">
         <img src="./assets/plant.svg" class="logo-img">
         <h2>Nutrivue</h2>
       </div>
-    </div>
+    </header>
+    <welcome />
     <router-view/>
+    <app-footer/>
   </div>
 </template>
+
+<script>
+import Footer from "@/views/Footer";
+import Welcome from "@/views/Welcome";
+export default {
+  name: "App",
+  components: {
+    "app-footer": Footer,
+    welcome: Welcome
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 #app {
@@ -27,11 +41,11 @@
   justify-content: flex-start;
   width: 100%;
   position: relative;
-  border-bottom: 2px solid #ccc;
+  /* border-bottom: 2px solid #ccc; */
 }
 
 .logo {
-  margin-left: auto;
+  /* margin-left: auto; */
   font-size: 2rem;
   display: flex;
   align-items: center;
@@ -57,5 +71,9 @@ body {
   width: 35px;
   height: 35px;
   margin-right: 0.25rem;
+}
+
+.header {
+  border-bottom: 2px solid #000 !important;
 }
 </style>

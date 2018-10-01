@@ -24,9 +24,12 @@
         <font-awesome-icon icon="times" size="1x" />
       </button>
       <list :suggestions="suggestions" />
-      <loader v-if="loading" />
+      <i v-if="loading" class="spinner">
+        <img src="../../assets/spinner.gif" />
+      </i>
+      <!-- <loader v-if="loading" /> -->
     </div>
-    <span class="selected-food">{{selectedFood}}</span>
+    <!-- <span class="selected-food">{{selectedFood}}</span> -->
   </div>
 </template>
 
@@ -37,7 +40,7 @@ import _ from "lodash";
 import { mapState } from "vuex";
 
 export default {
-  nam: "auto-suggest",
+  name: "auto-suggest",
   components: {
     List,
     Loader
@@ -100,19 +103,17 @@ export default {
   justify-content: flex-start;
   width: 100%;
   min-width: 200px;
-  // height: 100%;
   padding: 1.25rem 0.5rem;
-  // position: relative;
   font-family: "Roboto", sans-serif;
   margin-bottom: 1rem;
   position: relative;
-  background: #9dc183;
+  background: #54621B;
   border-radius: 3px;
+  flex-wrap: wrap;
+  /* box-shadow: 0 5px 5px 1px rgba(0,0,0,0.95); */
   input {
     border: 2px solid rgba($color: #fff, $alpha: 1);
     border-radius: 4px;
-    width: 100%;
-    height: 100%;
     padding-left: 0.75rem;
     font-size: 1rem;
   }
@@ -149,6 +150,11 @@ export default {
     }
   }
 
+  input[type="text"] {
+    width: 100%;
+    outline: none;
+  }
+
   .input-wrapper {
     display: flex;
     position: relative;
@@ -170,6 +176,15 @@ export default {
     margin-left: auto;
     text-transform: capitalize;
     margin-right: 1.25rem;
+  }
+
+  .spinner {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
   }
 }
 </style>
