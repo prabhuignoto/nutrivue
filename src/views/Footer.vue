@@ -15,7 +15,7 @@
       Powered by Vue.JS
     </a>
     <div class="credit"><span>Designed and Built with</span><img src="../assets/heart.svg" alt="love"></div>
-    <div class="copyright">&copy; 2018 Prabhu Murthy</div>
+    <div class="copyright">&copy; 2019 Prabhu Murthy</div>
   </div>  
 </template>
 
