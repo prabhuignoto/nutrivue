@@ -8,24 +8,24 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.12",
-    "@fortawesome/free-solid-svg-icons": "^5.6.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/vue-fontawesome": "^0.1.5",
     "axios": "^0.18.0",
-    "bulma": "^0.7.2",
+    "bulma": "^0.7.4",
     "lodash": "^4.17.10",
-    "vue": "^2.5.22",
+    "vue": "^2.6.9",
     "vue-router": "^3.0.2",
     "vuex": "^3.1.0"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.120",
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^3.3.0",
-    "@vue/cli-service": "^3.3.0",
+    "@types/lodash": "^4.14.123",
+    "@vue/cli-plugin-babel": "^3.5.1",
+    "@vue/cli-plugin-eslint": "^3.5.1",
+    "@vue/cli-service": "^3.5.1",
     "@vue/eslint-config-prettier": "^4.0.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.22"
+    "vue-template-compiler": "^2.6.9"
   }
 }
